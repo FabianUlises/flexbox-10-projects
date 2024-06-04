@@ -8,3 +8,6 @@
 html {
     box-sizing: border-box;
 }
+img {
+    max-inline-size: 100%;
+}
