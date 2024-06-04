@@ -1,4 +1,9 @@
-*
+:root {
+    --primary: hsla(210 25% 20% / 1);
+    
+    --text-white: hsla(210 50% 98% / 1);
+}
+*,
 *::after,
 *::before {
     margin: 0;
@@ -10,4 +15,12 @@ htlm {
 }
 body {
     font-family: sans-serif;
+}
+nav {
+    background-color: var(--primary);
+    color: var(--text-white);
+    
+    & a {
+        color: inherit;
+    }
 }
