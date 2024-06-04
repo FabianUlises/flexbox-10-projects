@@ -93,21 +93,47 @@ body {
     padding: 2rem;
     box-shadow: 0 4px 12px -1px rgba(0, 0, 0, .5);
     border-radius: 1.6rem;
+    
+    & h2,
+    & h3{
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    & h2 {
+        margin-block-end: 2.6rem;
+    }
 }
 .services {
     
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
-    & h2,
-    & h3{
-        text-align: center;  
-    }
+    margin-block-end: 4rem;
+
     
     & h3 {
         font-size: 1.6rem;
         font-weight: 400;
         color: var(--primary-accent-1);
     }
+    
+    & p {
+        line-height: 2;
+        padding: 1rem 2rem;
+    }
+    
+    @media only screen and (min-width: 41.25em) {
+        flex-direction: row;
+    }
+ }
+.service {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    box-shadow: 2px 3px 8px rgba(64, 64, 64, 0.3);
+    border-radius: 1.6rem;
+    
+    @media only screen and (min-width: 41.25em) {
+
+    }    
 }
