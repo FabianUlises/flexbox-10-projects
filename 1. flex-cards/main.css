@@ -28,11 +28,14 @@ img {
     /* DEBUGGING STLYES */
     background-color: hsla(0 50% 30% / 1);
     padding: .5rem;
+    padding-block-end: 4rem
 }
 .main-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
     
     /* DEBUGGING STLYES */
     background-color: hsla(0 60% 70% / .4);
@@ -40,13 +43,22 @@ img {
 
 .entry {
     
+    @media only screen and (min-width: 480px) {
+        flex: 0 0 35%;
+    }
+    
+    @media only screen and (min-width: 760px) {
+        flex: 0 0 30%;
+    }
+    
     .content {
         display: flex;
         flex-direction: column;
         gap: .4rem;
         
-         h4 {
-            color: hsla(0 80% 30% / .6);
+        h4 {
+            color: hsla(0 50% 30% / 1);
+            text-transform: uppercase;
         }
 
         p {
@@ -63,6 +75,7 @@ img {
             display: inline-block;
             max-inline-size: max-content;
             align-self: center;
+            color: hsla(0 80% 30% / 1);
         }
     }
     
