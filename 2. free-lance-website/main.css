@@ -43,3 +43,25 @@ body {
         justify-content: space-around;
     }
 }
+
+.hero {
+    block-size: 45rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(img/hero.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+}
+
+.hero-content {
+    color: var(--text-white);
+    font-size: clamp(1.6rem, 1.5vw, 2.4rem);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(.4rem, 1.25vw, 1rem);
+    
+    .button {
+        color: inherit;
+    }
+}
