@@ -19,11 +19,14 @@ img {
 .container {
     max-inline-size: 1200px;
     margin: 0 auto;
+    
 /* DEBUGGING STLYES */
     background-color: hsla(0 50% 30% / 1);
     padding: .5rem;
 }
 .main-content {
+    display: flex;
+    flex-wrap: wrap;
     
     h2 {
         text-align: center;
