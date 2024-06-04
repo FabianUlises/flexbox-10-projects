@@ -10,6 +10,8 @@ html {
     padding: .5rem;
     color: #fff;
     background-color: #222;
+    font-family: 'Monaspace Radon';
+    line-height: 1.4;
 }
 img {
     max-inline-size: 100%;
@@ -23,6 +25,10 @@ img {
 }
 .main-content {
     
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
     
     /* DEBUGGING STLYES */
     background-color: hsla(0 60% 70% / .4);
