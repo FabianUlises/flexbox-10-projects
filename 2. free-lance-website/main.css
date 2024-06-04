@@ -95,6 +95,10 @@ body {
 }
 .services {
     
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
     & h2,
     & h3{
         text-align: center;  
