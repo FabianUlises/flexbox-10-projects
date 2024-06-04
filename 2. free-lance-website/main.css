@@ -75,7 +75,7 @@ body {
         align-self: center;
         padding: .8rem 1.2rem;
         text-decoration: none;
-        margin-block-start: 2rem;
+        margin-block-start: 1.6rem;
         transition: background-color 75ms;
         
         &:hover {
