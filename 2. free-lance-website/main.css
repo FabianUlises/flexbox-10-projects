@@ -3,7 +3,7 @@
     
     --text-white: hsla(210 50% 98% / 1);
     --text-reg: 1.6rem;
-    --text-4xl: 4rem;
+    --text-4xl: rem;
 }
 *,
 *::after,
@@ -12,11 +12,12 @@
     padding: 0;
     box-sizing: inherit;
 }
-htlm {
+html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
 body {
+    font-size: 1.8rem;
     font-family: sans-serif;
 }
 .main-nav {
@@ -32,7 +33,7 @@ body {
     
     & a {
         color: inherit;
-        font-size: var(--text-4xl);
+        /* font-size: var(--text-4xl); */
         text-decoration: none;
     }
 }
