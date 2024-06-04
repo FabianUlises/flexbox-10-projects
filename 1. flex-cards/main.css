@@ -32,6 +32,7 @@ img {
 .main-content {
     display: flex;
     flex-wrap: wrap;
+    gap: 4rem;
     
     /* DEBUGGING STLYES */
     background-color: hsla(0 60% 70% / .4);
@@ -39,6 +40,27 @@ img {
 
 .entry {
     
+    .content {
+
+         h4 {
+            color: hsla(0 80% 30% / .6);
+        }
+
+        p {
+            text-align: center;
+
+            span {
+                color: hsla(0 10% 85% / 1);
+                font-style: italic;
+            }
+        }
+
+        a {
+            text-align: center;
+            display: inline-block;
+            max-inline-size: max-content;
+        }
+    }
     
     /* DEBUGGING STLYES */
     background-color: hsla(0 100% 100% / .125);
