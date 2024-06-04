@@ -3,7 +3,7 @@
     
     --text-white: hsla(210 50% 98% / 1);
     --text-reg: 1.6rem;
-    --text-4xl: rem;
+    --text-respond: clamp(1.6rem, 2vw, 2.4rem);
 }
 *,
 *::after,
@@ -34,11 +34,11 @@ body {
     
     & a {
         color: inherit;
-        /* font-size: var(--text-4xl); */
+        font-size: var(--text-respond); 
         text-decoration: none;
     }
 
-    @media only screen and (min-width: 786px) {
+    @media only screen and (min-width: 768px) {
         flex-direction: row;
         justify-content: space-around;
     }
