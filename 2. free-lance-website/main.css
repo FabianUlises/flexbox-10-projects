@@ -16,7 +16,7 @@ htlm {
 body {
     font-family: sans-serif;
 }
-nav {
+.main-nav {
     background-color: var(--primary);
     color: var(--text-white);
     
