@@ -6,17 +6,31 @@
     hsla(210 50% 98% / 1)
     hsla(210 25% 20% / 1)
     */
-    --primary: light-dark(var(--primary-white), var(--primary-blue));
     --primary-blue: hsla(210 25% 20% / 1);
-    --blue-accent: hsla(210 48% 75% / 1);
+    --primary-blue-2: hsla(210 25% 40% / .65);
+    --blue-accent-dark: hsla(210 48% 75% / 1);
+    --blue-accent-light: hsl(209.8, 100%, 55%);
     --primary-white: hsla(210 50% 98% / 1);
-    --primary-2: hsla(210 25% 40% / .65);
-    --primary-accent-1: light-dark(hsl(209.8, 100%, 55%), var(--blue-accent));
-    --text-white: light-dark(hsla(210 25% 20% / 1), white);
+    --orange-accent: orange;
+    --primary-color: light-dark(var(--primary-white), var(--primary-blue));
+    --primary-accent-1: light-dark(var(--blue-accent-light), var(--blue-accent-dark));
+    --text-color: light-dark(var(--primary-blue), var(--primary-white));
     
     /* Typography */
-    --text-reg: 1.6rem;
-    --text-respond: clamp(1.4rem, 1.5vw, 2rem);
+    --text-sm: 1.4rem;
+    --text-1: 1.6rem;
+    --text-2: 1.8rem;
+    --text-3: 2rem;
+    --text-4: 2.2rem;
+    --text-5: 2.4rem;
+    --text-respond-sm: clamp(var(--text-sm), 1.5vw, var(--text-3));
+    /* ????? */
+    --text-respond-md: clamp(2.4rem, 3vw, 3.2rem);
+    --text-respond-lg: clamp(1.6rem, 1.5vw, 2.4rem);
+
+    /* Shadows */
+    --box-shadow-lg: 0 4px 12px -1px rgba(0, 0, 0, .5);
+    --box-shadow-sm: 0 2px 8px rgba(0, 0, 0, .3);
 }
 *,
 *::after,
@@ -31,13 +45,13 @@ html {
     font-size: 62.5%;
 }
 body {
-    font-size: 1.8rem;
+    font-size: var(--text-2);
     font-family: sans-serif;
-    background-color: var(--primary);
-    color: var(--text-white);
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 .main-nav {
-    color: var(--text-white);
+    color: var(--text-color);
     max-inline-size: 1200px;
     text-align: center;
     margin: 0 auto;
@@ -49,7 +63,7 @@ body {
     
     & a {
         color: inherit;
-        font-size: var(--text-respond); 
+        font-size: var(--text-respond-sm); 
         text-decoration: none;
         font-weight: 300;
         padding: 1rem 0;
@@ -87,7 +101,7 @@ body {
 
 .hero-content {
     color: var(--primary-white);
-    font-size: clamp(1.6rem, 1.5vw, 2.4rem);
+    font-size: var(--text-respond-lg);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -101,7 +115,7 @@ body {
         background-color: var(--primary-blue);
         color: inherit;
         font-weight: 300;
-        font-size: 1.6rem;
+        font-size: var(--text-1);
         align-self: center;
         padding: .8rem 1.2rem;
         text-decoration: none;
@@ -110,7 +124,7 @@ body {
         transition: background-color 75ms;
         
         &:hover {
-            background-color: var(--primary-2);
+            background-color: var(--primary-blue-2);
         }
     }
 }
@@ -121,7 +135,7 @@ body {
     margin-block: 6rem;
     background-color: hsla(210 10% 40% / .2);
     padding: 2rem;
-    box-shadow: 0 4px 12px -1px rgba(0, 0, 0, .5);
+    box-shadow: var(--box-shadow-lg);
     border-radius: 1.6rem;
     
     & h2,
@@ -131,7 +145,7 @@ body {
     }
     
     & h2 {
-        font-size: clamp(2.4rem, 3vw, 3.2rem);
+        font-size: var(--text-respond-md);
 /*        font-size: clamp(1.6rem, 1.5vw, 2.4rem);*/
 
         margin-block-end: 2.6rem;
@@ -146,13 +160,13 @@ body {
 
     
     & h3 {
-        font-size: 2rem;
+        font-size: var(--text-3);
         font-weight: 400;
         color: var(--primary-accent-1);
     }
     
     & p {
-        font-size: 1.6rem;
+        font-size: var(--text-1);
         line-height: 2;
         padding: 1rem 2rem;
         text-align: center;
@@ -167,7 +181,7 @@ body {
     /* background-color: rgba(0, 0, 0, 0.2); */
     background-color: light-dark(var(--primary-white), var(--primary-blue));
     padding: 1rem;
-    box-shadow: 2px 3px 8px rgba(64, 64, 64, 0.3);
+    box-shadow: var(--box-shadow-sm);
     border-radius: 1.6rem;
     
     @media only screen and (min-width: 41.25em) {
@@ -180,7 +194,7 @@ body {
     border-radius: 1.6rem;
     max-inline-size: 40rem;
     margin: 0 auto;
-    box-shadow: 2px 3px 8px rgba(64, 64, 64, 0.3);
+    box-shadow: var(--box-shadow-sm);
     
     & form {
         display: flex;
@@ -196,7 +210,7 @@ body {
 
 
     & input {
-        font-size: 1.6rem;
+        font-size: var(--text-1);
         inline-size: 100%;
         padding: .8rem 1rem;
         border-radius: .4rem;
@@ -205,7 +219,7 @@ body {
         
         &:focus {
             outline: none;
-            border-bottom: 3px solid orange;
+            border-bottom: 3px solid var(--orange-accent);
         }
     }
 
@@ -221,11 +235,17 @@ body {
     .form-button {
         inline-size: 10rem;
         background-color: var(--primary-accent-1);
-        color: #222;
+        color: var(--primary-color);
         border: none;
         outline: none;
         padding: .8rem 1.2rem;
-        font-size: 1.6rem;
+        font-size: var(--text-1);
         border-radius: .4rem;
+        cursor: pointer;
+        transition: background-color 75ms;
+
+        &:hover {
+            background-color: var(--orange-accent);
+        }
     }
 }
