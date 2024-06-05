@@ -103,6 +103,9 @@ body {
     }
     
     & h2 {
+        font-size: clamp(2.4rem, 3vw, 3.2rem);
+/*        font-size: clamp(1.6rem, 1.5vw, 2.4rem);*/
+
         margin-block-end: 2.6rem;
     }
 }
