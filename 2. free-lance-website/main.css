@@ -73,10 +73,12 @@ body {
         background-color: var(--primary);
         color: inherit;
         font-weight: 300;
+        font-size: 1.6rem;
         align-self: center;
         padding: .8rem 1.2rem;
         text-decoration: none;
         margin-block-start: 1.6rem;
+        border-radius: .8rem;
         transition: background-color 75ms;
         
         &:hover {
@@ -122,6 +124,7 @@ body {
         font-size 1.6rem;
         line-height: 2;
         padding: 1rem 2rem;
+        text-align: center;
 
     }
     
